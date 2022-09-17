@@ -1,0 +1,36 @@
+#container {width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid green;}
+            
+      
+header {background-color: lightblue;
+    color: black;
+    font-size: 180%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 155px;}
+
+nav {float:left;
+    width: 150px;}
+
+#rightcol {margin-left: 155px;
+    margin-top: 0px;
+    background-color: Yellow;
+    padding: 10px;}
+
+            
+body {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+footer {font-size: small; 
+    font-style:italic;}
+
+    ul {list-style-type: none;
+    font-size: 1.25em;
+    font-weight: bold;}
+
+    a {text-decoration: none;}
+
+    #island {float: right; 
+        margin: 5px 0px 10px 20px;
+        border: 1px solid #000000;}
