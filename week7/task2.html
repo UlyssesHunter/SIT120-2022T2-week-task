@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0"/>
+        <script src="http://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <component1 :person="person"></component1>
+            <component2 v-for="talk in talks" :talk="talk"></component1>
+        </div>
+    </body>
+    
+</html>
+<script>
+var component1 = {
+    template: '<div>I am{{ person.name }} work at {{ person. company }}</div>',
+    props:['person','talk'],
+};
+var component2 = {
+    template: '<div>{{ talk }}</div>',
+    props:['person','talk'],
+};
+var app = new Vue({
+    el: '#app',
+
+    data: {
+        person: {
+            name: 'Veronica',
+            company: 'Veridian Dynamics'
+        },
+        talks: ['Good morning','Good day','Good to see you','Good night'],
+    },
+    components:{
+        component1,
+        component2,
+    },
+});
+</script>

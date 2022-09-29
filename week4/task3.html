@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet"href="./task2.css"/>
+        <title> Week2 </title>
+    </head>
+    <body>
+<div  class="flex-container">
+        <div>
+            <canvas
+            id="myCanvas"
+            width="200"
+            height="100"
+            style="border: 1px solid #000000"
+            >
+            </canvas>
+        </div>
+        <div>
+            <audio controls>
+                <source src="horse.ogg" type="audio/ogg"/>
+            </audio>
+        </div>
+        <div>
+            <video width="320" height="240" controls>
+                <source src="movie.mp4" type="video/mp4"/>
+            </video>
+        </div>
+        <div>
+            <iframe width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/cZAw8qxn0ZE" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            ></iframe>
+        </div>
+</div>
+        
+    <script src="../week2/script.js"></script>
+    </body>
+</html>
+<style>
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+</style>

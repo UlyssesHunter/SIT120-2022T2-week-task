@@ -9,28 +9,24 @@
     </head>
     <body>
         <div id="app">
-            <p>User name</p>
-            <input 
-            v-modle="name"
-            type="text" 
-            placeholder="Please enter your user name"
-            />
-            <p>password</p>
-            <input type="password" placeholder="please enter password"/>
-            <input type="range"/>
-            <p>number</p>
-            <input type="number">
-            <p>month</p>
-            <input type="month">
+            <input type="checkbox" id ="checkbox" v-modle="checked" />
+            <label for="checkbox">{{ checked }}</label>
+            <div></div>
+            <input type="checkbox" id ="me" value = "1" v-modle="checkedNames" />
+            <label for="checkbox">me</label>
+            <br />
+            <span>checked Names: {{checkedNames}}</span>
         </div>
     </body>
-    <script>
+</html>
+
+<script>
     var app = new Vue({
         el: "#app",
         data: {
             message: 'Hello Vue!',
-            name: 'sam',
+            checked: false,
+            checkedNames: [],
         },
     });
 </script>
-</html>

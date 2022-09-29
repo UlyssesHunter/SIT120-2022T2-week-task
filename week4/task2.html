@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0"/>
+        <title>Document</title>
+        <script src="http://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p v-for="assignment in assignments" :key="assignment.id">{{assignment.id}}</p>
+            <div v-if="unitCode == 'SIT000'">
+                Really
+            </div>
+            <div v-else-if="unitCode=='SIT120'">
+                yes this unitCode is SIT120
+            </div>
+            <div v-else>
+                What
+            </div>
+            <input type="button" value="try" @click="changeIsShow" />
+            <p v-show="isShow">Good</p>
+        </div>
+    </body>
+</html>
+<script>
+    let app = new Vue({
+        el: "#app",
+        data: {
+            assignments: [
+                {
+                    name: 'assignment1',
+                    dueTomorrow: true,
+                    id: 1,
+                },
+                {
+                    name: 'assignment2',
+                    dueTomorrow: false,
+                    id: 2,
+                },
+                {
+                    name: 'assignment3',
+                    dueTomorrow: true,
+                    id: 3,
+                },
+            ],
+            unitCode: "SIT120",
+            isShow:false,
+        },
+        methods: {
+                changeIsShow: function () {
+                    this.isShow =! this.isShow;
+                },
+            },
+        computed:{
+            dueTomorrowAssignments(){
+                return this.assignments.filter((assignment)=>assignment.dueTomorrow);
+            },
+        },
+    });
+</script>
